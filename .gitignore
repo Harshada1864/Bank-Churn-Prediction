@@ -1,0 +1,15 @@
+# Ignore dataset files to avoid uploading large or sensitive data
+data/
+*.csv
+*.xlsx
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+
+# Ignore other temporary files
+*.log
+*.tmp

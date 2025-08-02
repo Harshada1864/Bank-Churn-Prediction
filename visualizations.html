@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Customer Churn Prediction Visualizations</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            line-height: 1.6;
+            background-color: #f4f4f4;
+        }
+        h1, h2 {
+            color: #333;
+            text-align: center;
+        }
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .plot {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .plot img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .plot p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bank Customer Churn Prediction Visualizations</h1>
+        <p>This page shows the key visualizations from my churn prediction project. I analyzed a bank dataset to predict which customers might leave, using data analysis and machine learning. These plots are easy to understand and show my findings.</p>
+
+        <h2>Exploratory Data Analysis</h2>
+        <div class="plot">
+            <img src="outputs/churn_distribution.png" alt="Churn Distribution">
+            <p><strong>Churn Distribution</strong>: This shows how many customers stayed (0) vs. left (1). Most customers stay, but about 20% churn, so the data is imbalanced.</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/correlation_heatmap.png" alt="Correlation Heatmap">
+            <p><strong>Correlation Heatmap</strong>: This shows how features like age and balance relate to each other and churn. Strong correlations (red or blue) help identify important factors.</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/age_vs_churn.png" alt="Age vs. Churn">
+            <p><strong>Age vs. Churn</strong>: This box plot compares the age of customers who stayed vs. left. Older customers seem more likely to churn.</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/balance_vs_churn.png" alt="Balance vs. Churn">
+            <p><strong>Balance vs. Churn</strong>: This shows how account balance relates to churn. Customers with higher balances may have different churn patterns.</p>
+        </div>
+
+        <h2>Model Performance</h2>
+        <div class="plot">
+            <img src="outputs/roc_curve_logistic_regression.png" alt="ROC Curve Logistic Regression">
+            <p><strong>ROC Curve - Logistic Regression</strong>: This shows how well Logistic Regression predicts churn. The AUC score indicates its performance (higher is better).</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/roc_curve_random_forest.png" alt="ROC Curve Random Forest">
+            <p><strong>ROC Curve - Random Forest</strong>: This plots the Random Forest models performance. It usually does better than Logistic Regression.</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/roc_curve_xgboost.png" alt="ROC Curve XGBoost">
+            <p><strong>ROC Curve - XGBoost</strong>: This shows XGBoosts performance, which is often the best due to its ability to handle complex patterns.</p>
+        </div>
+
+        <h2>Explainable AI (SHAP)</h2>
+        <div class="plot">
+            <img src="outputs/shap_summary.png" alt="SHAP Summary">
+            <p><strong>SHAP Feature Importance</strong>: This plot shows which features (like age or products_number) most influence churn predictions. Red means higher values increase churn risk.</p>
+        </div>
+        <div class="plot">
+            <img src="outputs/shap_dependence_age.png" alt="SHAP Dependence Plot">
+            <p><strong>SHAP Dependence Plot</strong>: This shows how the top feature (e.g., age) affects churn predictions. It helps explain why certain customers are at risk.</p>
+        </div>
+    </div>
+</body>
+</html>
